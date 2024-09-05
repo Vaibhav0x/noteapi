@@ -50,8 +50,8 @@ This is a simple note-taking RESTful API built using Django Framework.
 - `POST /api/notes/`: Create a new note.
 - `GET /api/notes/<id>/`: Fetch a note by its primary key.
 - `GET /api/notes?title=<substring>`: Query notes by title substring.
-- `PUT /api/notes/<id>/update`: Update an existing note of this <id>.
-- `DELETE /api/notes/<id>/delete`: Delete an existing note of this <id>.
+- `PUT /api/notes/<id>/update/`: Update an existing note of this <id>.
+- `DELETE /api/notes/<id>/delete/`: Delete an existing note of this <id>.
 
 ## Testing
 
