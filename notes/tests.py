@@ -32,3 +32,12 @@ class NoteTests(APITestCase):
         note.refresh_from_db()
         self.assertEqual(note.title, 'New Title')
         self.assertEqual(note.body, 'Updated body.')
+
+    def test_delete_note(self):
+        note = Note.objects.create(title='Test Note', body='This is a test note.')
+        url = reverse('delete-note', args=[note.id])
+        
+        self.assertEqual(Note.objects.count(), 1)
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(Note.objects.count(), 0)

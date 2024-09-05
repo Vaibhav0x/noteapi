@@ -27,3 +27,11 @@ class UpdateNoteView(generics.UpdateAPIView):
     serializer_class = NoteSerializer
 
     # No need to override the put method unless adding custom logic
+
+class DeleteNoteView(generics.DestroyAPIView):
+    queryset = Note.objects.all()
+    serializer_class = NoteSerializer
+
+    def delete(self, request, *args, **kwargs):
+        print("DELETE request received for note ID:", kwargs['pk'])
+        return super().delete(request, *args, **kwargs)
