@@ -6,7 +6,12 @@ This is a simple note-taking RESTful API built using Django Framework.
 
 1. Clone the repository:
     ```bash
-    git clone <your_repository_url>
+    git clone <repository_url>
+    cd noteapi
+    ```
+    Or
+    ```bash
+    git clone https://github.com/Vaibhav0x/noteapi.git
     cd noteapi
     ```
 
@@ -18,6 +23,11 @@ This is a simple note-taking RESTful API built using Django Framework.
 3. Set up the PostgreSQL database:
     - Create a new database in PostgreSQL.
     - Update the `DATABASES` setting in `noteapi/settings.py` with your database credentials.
+
+    -PostgreSQL Download Link: `https://www.enterprisedb.com/downloads/postgres-postgresql-downloads`
+
+    -After downloading and setup simply run the pgAdmin4 then enter password and in server in databases create new database to click on databases.
+    -Enter the database name and owner is user that use in your `notes/settings.py` file to give update database name, user and password. 
 
 4. Run migrations:
     ```bash
